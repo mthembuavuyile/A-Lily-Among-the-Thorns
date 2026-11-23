@@ -1,8 +1,13 @@
 /* ==========================================================================
-   A LILY AMONG THE THORNS — Interactive Scripts & Floating Floral Petals
+   A LILY AMONG THE THORNS — Interactive Scripts, Lucide Icons & Petals
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // 0. Initialize Lucide Vector Icons
+  if (typeof window.lucide !== 'undefined') {
+    window.lucide.createIcons();
+  }
+
   // 1. Mobile Navigation Toggle
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mainNav = document.getElementById('main-nav');
@@ -103,9 +108,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 6. Copy Phone Number Buttons
   const toast = document.getElementById('toast');
+  const toastMessage = document.getElementById('toast-message');
   const showToast = (msg) => {
     if (!toast) return;
-    toast.textContent = msg;
+    if (toastMessage) {
+      toastMessage.textContent = msg;
+    } else {
+      toast.textContent = msg;
+    }
     toast.classList.add('show');
     setTimeout(() => toast.classList.remove('show'), 2800);
   };
@@ -116,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!numberToCopy) return;
       try {
         await navigator.clipboard.writeText(numberToCopy);
-        showToast(`Copied ${numberToCopy} to clipboard! ✿`);
+        showToast(`Copied ${numberToCopy} to clipboard`);
       } catch {
         showToast(`Phone: ${numberToCopy}`);
       }
@@ -134,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const message = document.getElementById('member-message').value.trim();
 
       const formattedText =
-        `🌸 *A Lily Among the Thorns — Sisterhood Inquiry* 🌸\n\n` +
+        `*A Lily Among the Thorns — Sisterhood Inquiry*\n\n` +
         `*Name:* ${name}\n` +
         `*Area of Interest:* ${interest}\n\n` +
         `*Message:* ${message}\n\n` +
@@ -142,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const whatsappUrl = `https://wa.me/${recipient}?text=${encodeURIComponent(formattedText)}`;
       window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
-      showToast('Opening WhatsApp to send your note! 🌸');
+      showToast('Opening WhatsApp to send your inquiry');
     });
   }
 
