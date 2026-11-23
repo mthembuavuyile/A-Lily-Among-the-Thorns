@@ -212,22 +212,85 @@
       </a>
 
       <nav class="main-nav" id="main-nav" aria-label="Main Navigation">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#vision-mission" class="nav-link">Vision &amp; Mission</a>
-        <a href="#values" class="nav-link">Core Values</a>
-        <a href="#objectives" class="nav-link">Our Objectives</a>
-        <a href="#founders" class="nav-link">Founders</a>
+        <div class="mobile-nav-eyebrow">
+          <i data-lucide="sparkles" class="icon-xs"></i>
+          <span>Explore Our Sanctuary</span>
+        </div>
+
+        <a href="#about" class="nav-link">
+          <span class="nav-link-inner">
+            <span class="nav-link-icon"><i data-lucide="flower-2" class="icon-sm"></i></span>
+            <span class="nav-link-text">About</span>
+          </span>
+          <i data-lucide="chevron-right" class="icon-xs nav-chevron"></i>
+        </a>
+
+        <a href="#vision-mission" class="nav-link">
+          <span class="nav-link-inner">
+            <span class="nav-link-icon"><i data-lucide="compass" class="icon-sm"></i></span>
+            <span class="nav-link-text">Vision &amp; Mission</span>
+          </span>
+          <i data-lucide="chevron-right" class="icon-xs nav-chevron"></i>
+        </a>
+
+        <a href="#values" class="nav-link">
+          <span class="nav-link-inner">
+            <span class="nav-link-icon"><i data-lucide="heart" class="icon-sm"></i></span>
+            <span class="nav-link-text">Core Values</span>
+          </span>
+          <i data-lucide="chevron-right" class="icon-xs nav-chevron"></i>
+        </a>
+
+        <a href="#objectives" class="nav-link">
+          <span class="nav-link-inner">
+            <span class="nav-link-icon"><i data-lucide="award" class="icon-sm"></i></span>
+            <span class="nav-link-text">Our Objectives</span>
+          </span>
+          <i data-lucide="chevron-right" class="icon-xs nav-chevron"></i>
+        </a>
+
+        <a href="#founders" class="nav-link">
+          <span class="nav-link-inner">
+            <span class="nav-link-icon"><i data-lucide="users" class="icon-sm"></i></span>
+            <span class="nav-link-text">Founders</span>
+          </span>
+          <i data-lucide="chevron-right" class="icon-xs nav-chevron"></i>
+        </a>
+
         <a href="#contact" class="nav-cta">
           <span>Join Our Sisterhood</span>
           <i data-lucide="arrow-up-right" class="icon-sm"></i>
         </a>
+
+        <!-- Mobile Drawer Footer (Quick Connect & Scripture Note) -->
+        <div class="mobile-nav-footer">
+          <p class="mobile-nav-verse">“Rooted and built up in Him…” — Colossians 2:7</p>
+          <div class="mobile-nav-socials">
+            <a href="https://www.instagram.com/a_lily_among_the_thorns/" target="_blank" rel="noopener noreferrer" class="mobile-social-pill">
+              <i data-lucide="instagram" class="icon-xs"></i>
+              <span>@a_lily_among_the_thorns</span>
+            </a>
+            <div class="mobile-phone-row">
+              <a href="https://wa.me/27683438490" target="_blank" rel="noopener noreferrer" class="mobile-social-pill purple-pill">
+                <i data-lucide="message-circle" class="icon-xs"></i>
+                <span>+27 68 343 8490</span>
+              </a>
+              <a href="https://wa.me/27650672694" target="_blank" rel="noopener noreferrer" class="mobile-social-pill purple-pill">
+                <i data-lucide="message-circle" class="icon-xs"></i>
+                <span>+27 65 067 2694</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </nav>
 
       <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Menu" aria-expanded="false">
-        <i data-lucide="menu" class="icon-md"></i>
+        <i data-lucide="menu" class="icon-md menu-icon-open"></i>
+        <i data-lucide="x" class="icon-md menu-icon-close"></i>
       </button>
     </div>
   </header>
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop" aria-hidden="true"></div>
 
   <main>
     <!-- HERO SECTION -->

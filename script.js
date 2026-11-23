@@ -8,21 +8,41 @@ document.addEventListener('DOMContentLoaded', () => {
     window.lucide.createIcons();
   }
 
-  // 1. Mobile Navigation Toggle
+  // 1. Mobile Navigation Toggle & Backdrop
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const mainNav = document.getElementById('main-nav');
+  const mobileBackdrop = document.getElementById('mobile-nav-backdrop');
+
+  const closeMobileMenu = () => {
+    if (!mainNav || !mobileMenuBtn) return;
+    mainNav.classList.remove('open');
+    mobileMenuBtn.classList.remove('is-active');
+    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+    if (mobileBackdrop) mobileBackdrop.classList.remove('active');
+    document.body.classList.remove('menu-open');
+  };
 
   if (mobileMenuBtn && mainNav) {
     mobileMenuBtn.addEventListener('click', () => {
       const isOpen = mainNav.classList.toggle('open');
+      mobileMenuBtn.classList.toggle('is-active', isOpen);
       mobileMenuBtn.setAttribute('aria-expanded', String(isOpen));
+      if (mobileBackdrop) mobileBackdrop.classList.toggle('active', isOpen);
+      document.body.classList.toggle('menu-open', isOpen);
     });
 
     mainNav.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        mainNav.classList.remove('open');
-        mobileMenuBtn.setAttribute('aria-expanded', 'false');
-      });
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    if (mobileBackdrop) {
+      mobileBackdrop.addEventListener('click', closeMobileMenu);
+    }
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mainNav.classList.contains('open')) {
+        closeMobileMenu();
+      }
     });
   }
 
