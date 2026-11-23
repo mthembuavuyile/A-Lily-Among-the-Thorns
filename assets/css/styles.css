@@ -1139,58 +1139,43 @@ section {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
-  max-width: 900px;
+  max-width: 920px;
   margin: 0 auto;
 }
 
 .founder-card {
   background: #FFFFFF;
   border-radius: var(--radius-lg);
-  padding: 38px 30px;
-  text-align: center;
+  overflow: hidden;
   border: 1px solid var(--pink-200);
   box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
 }
 
-.founder-floral-ring {
-  position: relative;
-  width: 104px;
-  height: 104px;
-  margin: 0 auto 20px;
-  border-radius: 50%;
-  padding: 4px;
-  background: var(--bg-accent-gradient);
+.founder-portrait-frame {
+  width: 100%;
+  aspect-ratio: 4 / 4.2;
+  background: #F4EFF4;
+  overflow: hidden;
+  border-bottom: 1px solid var(--pink-100);
 }
 
-.founder-monogram {
+.founder-photo {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
-  background: #FFFFFF;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-serif);
-  font-size: 2.1rem;
-  font-weight: 700;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
-.pink-monogram   { color: var(--pink-600); }
-.purple-monogram { color: var(--purple-600); }
-
-.ring-blossom {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  background: #FFFFFF;
-  border: 1.5px solid var(--pink-200);
+.founder-content {
+  padding: 28px 28px 32px;
+  text-align: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  color: var(--pink-600);
+  flex: 1;
 }
 
 .founder-role {
@@ -1208,9 +1193,9 @@ section {
 
 .founder-name {
   font-family: var(--font-serif);
-  font-size: 1.9rem;
+  font-size: 1.95rem;
   color: var(--text-dark);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .founder-bio {
@@ -1225,6 +1210,7 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   gap: 8px;
+  margin-top: auto;
 }
 
 .founder-tags span {
@@ -1870,11 +1856,18 @@ section {
   .value-petal-card,
   .objective-card,
   .affirmation-box,
-  .founder-card,
   .contact-method-card,
   .form-card {
     padding: 24px 20px;
     border-radius: 18px;
+  }
+
+  .founder-card {
+    border-radius: 18px;
+  }
+
+  .founder-content {
+    padding: 22px 20px 26px;
   }
 
   .emblem-halo {

@@ -22,7 +22,7 @@
   <meta property="og:url" content="https://alilyamongthethorns.co.za/" />
   <meta property="og:title" content="A Lily Among the Thorns | Rooted in Christ. Growing in Purpose. Blooming in Faith." />
   <meta property="og:description" content="Growing with grace in a world that isn't always gentle. A Christ-centered sisterhood empowering young women through faith, mentorship, wellness, and community outreach." />
-  <meta property="og:image" content="https://alilyamongthethorns.co.za/assets/hero-lily.svg" />
+  <meta property="og:image" content="https://alilyamongthethorns.co.za/assets/images/hero-lily.svg" />
   <meta property="og:image:alt" content="A Lily Among the Thorns - Christ-Centered Sisterhood" />
   <meta property="og:locale" content="en_ZA" />
 
@@ -31,11 +31,11 @@
   <meta name="twitter:url" content="https://alilyamongthethorns.co.za/" />
   <meta name="twitter:title" content="A Lily Among the Thorns | Rooted in Christ. Growing in Purpose." />
   <meta name="twitter:description" content="Growing with grace in a world that isn't always gentle. Rooted in Christ. Growing in purpose. Blooming in faith." />
-  <meta name="twitter:image" content="https://alilyamongthethorns.co.za/assets/hero-lily.svg" />
+  <meta name="twitter:image" content="https://alilyamongthethorns.co.za/assets/images/hero-lily.svg" />
 
   <!-- Favicons & App Icons -->
-  <link rel="icon" type="image/svg+xml" href="assets/lily-emblem.svg" />
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/lily-emblem.svg" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/lily-emblem.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/lily-emblem.svg" />
   <link rel="manifest" href="site.webmanifest" />
 
   <!-- Preconnect to Google Fonts & CDN -->
@@ -44,16 +44,16 @@
   <link rel="preconnect" href="https://unpkg.com" crossorigin />
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Preload Hero Illustration for LCP -->
-  <link rel="preload" as="image" href="assets/hero-lily.svg" />
+  <link rel="preload" as="image" href="assets/images/hero-lily.svg" />
 
-  <!-- Compiled Static Stylesheet -->
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
 
   <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://unpkg.com/lucide@latest" defer></script>
 
   <!-- Schema.org Structured Data (JSON-LD) -->
   <!-- 1. WebSite Representation -->
@@ -129,8 +129,8 @@
     "slogan": "Growing with grace in a world that isn't always gentle. Rooted in Christ. Growing in purpose. Blooming in faith.",
     "description": "A Christ-centered organization committed to empowering young women aged 18 and above to build a strong and lasting foundation in God as they navigate the different seasons of womanhood and adulthood.",
     "url": "https://alilyamongthethorns.co.za/",
-    "logo": "https://alilyamongthethorns.co.za/assets/lily-emblem.svg",
-    "image": "https://alilyamongthethorns.co.za/assets/hero-lily.svg",
+    "logo": "https://alilyamongthethorns.co.za/assets/images/lily-emblem.svg",
+    "image": "https://alilyamongthethorns.co.za/assets/images/hero-lily.svg",
     "areaServed": {
       "@type": "Country",
       "name": "South Africa"
@@ -139,12 +139,14 @@
       {
         "@type": "Person",
         "name": "Happy Nodada",
-        "jobTitle": "Co-Founder"
+        "jobTitle": "Co-Founder",
+        "image": "https://alilyamongthethorns.co.za/assets/images/founders/happy-nodada.jpeg"
       },
       {
         "@type": "Person",
         "name": "Siyabusiswa Mthembu",
-        "jobTitle": "Co-Founder"
+        "jobTitle": "Co-Founder",
+        "image": "https://alilyamongthethorns.co.za/assets/images/founders/siyabusiswa-mthembu.jpeg"
       }
     ],
     "contactPoint": [
@@ -181,7 +183,7 @@
     <div class="container nav-container">
       <a href="#home" class="brand-logo">
         <div class="logo-emblem-wrap">
-          <img src="assets/lily-emblem.svg" alt="A Lily Among the Thorns Emblem" class="logo-img" />
+          <img src="assets/images/lily-emblem.svg" alt="A Lily Among the Thorns Emblem" width="44" height="44" class="logo-img" />
         </div>
         <div class="brand-text">
           <span class="brand-title">A Lily Among the Thorns</span>
@@ -319,7 +321,7 @@
         <div class="hero-visual">
           <div class="floral-arch-frame">
             <div class="arch-inner">
-              <img src="assets/hero-lily.svg" alt="Blooming pink and white lilies in gentle golden light" class="hero-lily-img" />
+              <img src="assets/images/hero-lily.svg" alt="Blooming pink and white lilies in gentle golden light" width="480" height="540" fetchpriority="high" class="hero-lily-img" />
             </div>
 
             <!-- Highlight Badges -->
@@ -371,7 +373,7 @@
         <div class="about-layout">
           <div class="about-emblem-card">
             <div class="emblem-halo">
-              <img src="assets/lily-emblem.svg" alt="Floral Lily Crest" class="about-crest-img" />
+              <img src="assets/images/lily-emblem.svg" alt="Floral Lily Crest" width="180" height="180" loading="lazy" decoding="async" class="about-crest-img" />
             </div>
             <div class="emblem-quote">
               <span class="script-accent">True Growth</span>
@@ -780,44 +782,58 @@
 
         <div class="founders-grid">
           <!-- Founder 1: Happy Nodada -->
-          <div class="founder-card">
-            <div class="founder-floral-ring">
-              <div class="founder-monogram pink-monogram">HN</div>
-              <span class="ring-blossom" aria-hidden="true">
-                <i data-lucide="flower-2" class="icon-xs"></i>
-              </span>
+          <article class="founder-card">
+            <div class="founder-portrait-frame">
+              <img
+                src="assets/images/founders/happy-nodada.jpeg"
+                alt="Happy Nodada — Co-Founder of A Lily Among the Thorns"
+                width="360"
+                height="400"
+                loading="lazy"
+                decoding="async"
+                class="founder-photo"
+              />
             </div>
-            <span class="founder-role">Co-Founder &amp; Visionary</span>
-            <h3 class="founder-name">Happy Nodada</h3>
-            <p class="founder-bio">
-              Passionate about seeing young women rooted in Christ, walking boldly in their God-given identity, and flourishing with dignity, self-love, and grace.
-            </p>
-            <div class="founder-tags">
-              <span>Faith &amp; Mentorship</span>
-              <span>Sisterhood</span>
-              <span>Empowerment</span>
+            <div class="founder-content">
+              <span class="founder-role">Co-Founder &amp; Visionary</span>
+              <h3 class="founder-name">Happy Nodada</h3>
+              <p class="founder-bio">
+                Passionate about seeing young women rooted in Christ, walking boldly in their God-given identity, and flourishing with dignity, self-love, and grace.
+              </p>
+              <div class="founder-tags">
+                <span>Faith &amp; Mentorship</span>
+                <span>Sisterhood</span>
+                <span>Empowerment</span>
+              </div>
             </div>
-          </div>
+          </article>
 
           <!-- Founder 2: Siyabusiswa Mthembu -->
-          <div class="founder-card">
-            <div class="founder-floral-ring">
-              <div class="founder-monogram purple-monogram">SM</div>
-              <span class="ring-blossom" aria-hidden="true">
-                <i data-lucide="flower-2" class="icon-xs"></i>
-              </span>
+          <article class="founder-card">
+            <div class="founder-portrait-frame">
+              <img
+                src="assets/images/founders/siyabusiswa-mthembu.jpeg"
+                alt="Siyabusiswa Mthembu — Co-Founder of A Lily Among the Thorns"
+                width="360"
+                height="400"
+                loading="lazy"
+                decoding="async"
+                class="founder-photo"
+              />
             </div>
-            <span class="founder-role">Co-Founder &amp; Visionary</span>
-            <h3 class="founder-name">Siyabusiswa Mthembu</h3>
-            <p class="founder-bio">
-              Dedicated to cultivating a safe, nurturing Christ-centered sisterhood where every young woman feels seen, heard, valued, and equipped for purpose.
-            </p>
-            <div class="founder-tags">
-              <span>Purpose &amp; Growth</span>
-              <span>Wellness</span>
-              <span>Community Outreach</span>
+            <div class="founder-content">
+              <span class="founder-role">Co-Founder &amp; Visionary</span>
+              <h3 class="founder-name">Siyabusiswa Mthembu</h3>
+              <p class="founder-bio">
+                Dedicated to cultivating a safe, nurturing Christ-centered sisterhood where every young woman feels seen, heard, valued, and equipped for purpose.
+              </p>
+              <div class="founder-tags">
+                <span>Purpose &amp; Growth</span>
+                <span>Wellness</span>
+                <span>Community Outreach</span>
+              </div>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -965,7 +981,7 @@
       <div class="footer-top">
         <div class="footer-brand">
           <div class="footer-logo-row">
-            <img src="assets/lily-emblem.svg" alt="A Lily Among the Thorns Emblem" class="footer-emblem" />
+            <img src="assets/images/lily-emblem.svg" alt="A Lily Among the Thorns Emblem" width="52" height="52" loading="lazy" decoding="async" class="footer-emblem" />
             <div>
               <h3>A Lily Among the Thorns</h3>
               <p class="footer-script">Growing with grace in a world that isn't always gentle.</p>
@@ -1026,6 +1042,6 @@
     <span id="toast-message">Copied to clipboard</span>
   </div>
 
-  <script src="script.js"></script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>
