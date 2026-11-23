@@ -1,5 +1,5 @@
 /* ==========================================================================
-   A LILY AMONG THE THORNS — Interactive Scripts, Lucide Icons & Petals
+   A LILY AMONG THE THORNS — Clean, Lightweight Interactive Scripts
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -50,29 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const siteHeader = document.getElementById('site-header');
   window.addEventListener('scroll', () => {
     if (!siteHeader) return;
-    if (window.scrollY > 20) {
+    if (window.scrollY > 16) {
       siteHeader.classList.add('scrolled');
     } else {
       siteHeader.classList.remove('scrolled');
     }
-  });
+  }, { passive: true });
 
-  // 3. Scroll Reveal Observer
-  const revealElements = document.querySelectorAll('.reveal-up');
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    },
-    { threshold: 0.12 }
-  );
-
-  revealElements.forEach((el) => revealObserver.observe(el));
-
-  // 4. Core Values Interactive Highlight
+  // 3. Core Values Interactive Highlight
   const petalCards = document.querySelectorAll('.value-petal-card');
   petalCards.forEach((card) => {
     card.addEventListener('click', () => {
@@ -81,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 5. Daily Grace & Affirmation Generator
+  // 4. Daily Grace & Affirmation Generator
   const affirmations = [
     {
       text: '“You are a lily among the thorns — deeply loved by God, rooted in Christ, and created to bloom with grace even in seasons that aren’t gentle.”',
@@ -122,11 +107,11 @@ document.addEventListener('DOMContentLoaded', () => {
         affirmationText.textContent = affirmations[currentAffirmationIndex].text;
         affirmationRef.textContent = affirmations[currentAffirmationIndex].ref;
         affirmationText.style.opacity = '1';
-      }, 220);
+      }, 180);
     });
   }
 
-  // 6. Copy Phone Number Buttons
+  // 5. Copy Phone Number Buttons
   const toast = document.getElementById('toast');
   const toastMessage = document.getElementById('toast-message');
   const showToast = (msg) => {
@@ -137,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
       toast.textContent = msg;
     }
     toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 2800);
+    setTimeout(() => toast.classList.remove('show'), 2600);
   };
 
   document.querySelectorAll('.copy-btn').forEach((btn) => {
@@ -153,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 7. Sisterhood Form -> Direct WhatsApp Message Builder
+  // 6. Sisterhood Form -> Direct WhatsApp Message Builder
   const sisterhoodForm = document.getElementById('sisterhood-form');
   if (sisterhoodForm) {
     sisterhoodForm.addEventListener('submit', (e) => {
@@ -174,65 +159,5 @@ document.addEventListener('DOMContentLoaded', () => {
       window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
       showToast('Opening WhatsApp to send your inquiry');
     });
-  }
-
-  // 8. Soft Floating Pink & Lavender Petals Canvas
-  const canvas = document.getElementById('petals-canvas');
-  if (canvas) {
-    const ctx = canvas.getContext('2d');
-    let width = (canvas.width = window.innerWidth);
-    let height = (canvas.height = window.innerHeight);
-
-    window.addEventListener('resize', () => {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
-    });
-
-    const petalColors = [
-      'rgba(251, 207, 232, 0.55)', // Soft Blush Pink
-      'rgba(244, 114, 182, 0.35)', // Rose Pink
-      'rgba(233, 213, 255, 0.55)', // Soft Lavender Purple
-      'rgba(255, 255, 255, 0.7)'   // Pure White Lily Petal
-    ];
-
-    const petals = Array.from({ length: 24 }, () => ({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      size: 6 + Math.random() * 10,
-      speedY: 0.35 + Math.random() * 0.65,
-      speedX: -0.3 + Math.random() * 0.6,
-      angle: Math.random() * Math.PI * 2,
-      spin: (Math.random() - 0.5) * 0.015,
-      color: petalColors[Math.floor(Math.random() * petalColors.length)]
-    }));
-
-    function drawPetals() {
-      ctx.clearRect(0, 0, width, height);
-      petals.forEach((p) => {
-        p.y += p.speedY;
-        p.x += p.speedX + Math.sin(p.y * 0.012) * 0.3;
-        p.angle += p.spin;
-
-        if (p.y > height + 20) {
-          p.y = -20;
-          p.x = Math.random() * width;
-        }
-        if (p.x > width + 20) p.x = -20;
-        if (p.x < -20) p.x = width + 20;
-
-        ctx.save();
-        ctx.translate(p.x, p.y);
-        ctx.rotate(p.angle);
-        ctx.fillStyle = p.color;
-        ctx.beginPath();
-        ctx.ellipse(0, 0, p.size, p.size * 0.55, 0, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.restore();
-      });
-
-      requestAnimationFrame(drawPetals);
-    }
-
-    drawPetals();
   }
 });

@@ -176,28 +176,6 @@
   </script>
 </head>
 <body>
-  <!-- Floating Petals Canvas -->
-  <canvas id="petals-canvas" aria-hidden="true"></canvas>
-
-  <!-- Decorative Ambient Blobs -->
-  <div class="ambient-glow glow-pink" aria-hidden="true"></div>
-  <div class="ambient-glow glow-purple" aria-hidden="true"></div>
-  <div class="ambient-glow glow-rose" aria-hidden="true"></div>
-
-  <!-- Top Announcement Ribbon -->
-  <div class="top-ribbon">
-    <div class="container ribbon-inner">
-      <span class="ribbon-icon-wrap" aria-hidden="true">
-        <i data-lucide="flower-2" class="icon-xs"></i>
-      </span>
-      <span>Rooted in Christ &bull; Growing in Purpose &bull; Blooming in Faith</span>
-      <a href="https://www.instagram.com/a_lily_among_the_thorns/" target="_blank" rel="noopener noreferrer" class="ribbon-ig">
-        <i data-lucide="instagram" class="icon-xs"></i>
-        <span>@a_lily_among_the_thorns</span>
-      </a>
-    </div>
-  </div>
-
   <!-- Navigation Header -->
   <header class="site-header" id="site-header">
     <div class="container nav-container">
@@ -296,7 +274,7 @@
     <!-- HERO SECTION -->
     <section class="hero-section" id="home">
       <div class="container hero-grid">
-        <div class="hero-content reveal-up">
+        <div class="hero-content">
           <div class="pill-badge">
             <i data-lucide="flower-2" class="icon-sm badge-icon"></i>
             <span>Welcome to Our Sanctuary of Grace</span>
@@ -338,31 +316,32 @@
           </div>
         </div>
 
-        <div class="hero-visual reveal-up" style="transition-delay: 150ms;">
+        <div class="hero-visual">
           <div class="floral-arch-frame">
             <div class="arch-inner">
               <img src="assets/hero-lily.svg" alt="Blooming pink and white lilies in gentle golden light" class="hero-lily-img" />
-              <div class="arch-overlay-shimmer"></div>
             </div>
 
-            <!-- Floating Glass Badges -->
-            <div class="floating-card card-top-right">
-              <div class="fc-icon">
-                <i data-lucide="sparkles" class="icon-md"></i>
+            <!-- Highlight Badges -->
+            <div class="hero-badges-row">
+              <div class="floating-card card-top-right">
+                <div class="fc-icon">
+                  <i data-lucide="sparkles" class="icon-md"></i>
+                </div>
+                <div>
+                  <strong>Ages 18 &amp; Above</strong>
+                  <span>Safe &amp; Nurturing Space</span>
+                </div>
               </div>
-              <div>
-                <strong>Ages 18 &amp; Above</strong>
-                <span>Safe &amp; Nurturing Space</span>
-              </div>
-            </div>
 
-            <div class="floating-card card-bottom-left">
-              <div class="fc-icon">
-                <i data-lucide="flower-2" class="icon-md"></i>
-              </div>
-              <div>
-                <strong>Christ-Centered</strong>
-                <span>Faith, Self-Love &amp; Sisterhood</span>
+              <div class="floating-card card-bottom-left">
+                <div class="fc-icon">
+                  <i data-lucide="flower-2" class="icon-md"></i>
+                </div>
+                <div>
+                  <strong>Christ-Centered</strong>
+                  <span>Faith, Self-Love &amp; Sisterhood</span>
+                </div>
               </div>
             </div>
           </div>
@@ -380,17 +359,17 @@
     <!-- ABOUT SECTION -->
     <section class="about-section" id="about">
       <div class="container">
-        <div class="section-header text-center reveal-up">
+        <div class="section-header text-center">
           <span class="section-eyebrow">
             <i data-lucide="flower-2" class="icon-xs"></i>
             <span>Who We Are</span>
           </span>
           <h2 class="section-title">About <span class="gradient-italic">A Lily Among the Thorns</span></h2>
-          <p class="section-script">Nurturing young women spiritually, emotionally, mentally and practically</p>
+          <p class="section-subtitle">Nurturing young women spiritually, emotionally, mentally and practically.</p>
         </div>
 
         <div class="about-layout">
-          <div class="about-emblem-card reveal-up">
+          <div class="about-emblem-card">
             <div class="emblem-halo">
               <img src="assets/lily-emblem.svg" alt="Floral Lily Crest" class="about-crest-img" />
             </div>
@@ -408,7 +387,7 @@
             </div>
           </div>
 
-          <div class="about-story-cards reveal-up" style="transition-delay: 120ms;">
+          <div class="about-story-cards">
             <article class="story-card highlight-card">
               <div class="story-number">
                 <i data-lucide="book-open" class="icon-md"></i>
@@ -464,7 +443,7 @@
     <!-- VISION & MISSION SECTION -->
     <section class="vm-section" id="vision-mission">
       <div class="container">
-        <div class="section-header text-center reveal-up">
+        <div class="section-header text-center">
           <span class="section-eyebrow">
             <i data-lucide="compass" class="icon-xs"></i>
             <span>Our Guiding Light</span>
@@ -475,10 +454,12 @@
 
         <div class="vm-grid">
           <!-- 1. Our Vision -->
-          <div class="vm-card vision-card reveal-up">
-            <div class="vm-ribbon">1. Our Vision</div>
-            <div class="vm-icon-wrap pink-glow">
-              <i data-lucide="eye" class="icon-lg"></i>
+          <div class="vm-card vision-card">
+            <div class="vm-top-bar">
+              <div class="vm-icon-wrap pink-glow">
+                <i data-lucide="eye" class="icon-lg"></i>
+              </div>
+              <span class="vm-ribbon">1. Our Vision</span>
             </div>
             <h3>A Christ-Centered World of Empowered Women</h3>
             <div class="vm-paragraphs">
@@ -495,10 +476,12 @@
           </div>
 
           <!-- 2. Our Mission -->
-          <div class="vm-card mission-card reveal-up" style="transition-delay: 150ms;">
-            <div class="vm-ribbon purple-ribbon">2. Our Mission</div>
-            <div class="vm-icon-wrap purple-glow">
-              <i data-lucide="target" class="icon-lg"></i>
+          <div class="vm-card mission-card">
+            <div class="vm-top-bar">
+              <div class="vm-icon-wrap purple-glow">
+                <i data-lucide="target" class="icon-lg"></i>
+              </div>
+              <span class="vm-ribbon purple-ribbon">2. Our Mission</span>
             </div>
             <h3>A Safe, Inclusive &amp; Nurturing Space (18+)</h3>
             <div class="vm-paragraphs">
@@ -520,17 +503,17 @@
     <!-- CORE VALUES — WITH FAITH AT THE CENTRE -->
     <section class="values-section" id="values">
       <div class="container">
-        <div class="section-header text-center reveal-up">
+        <div class="section-header text-center">
           <span class="section-eyebrow">
             <i data-lucide="heart" class="icon-xs"></i>
             <span>What Anchors Us</span>
           </span>
           <h2 class="section-title">Core Values — <span class="gradient-italic">with Faith at the Centre</span></h2>
-          <p class="section-subtitle">Click or hover over each pillar of our sisterhood to reflect on the values that shape our walk.</p>
+          <p class="section-subtitle">The spiritual and practical principles that shape our walk together.</p>
         </div>
 
         <!-- Faith Centrepiece Card -->
-        <div class="faith-centrepiece reveal-up">
+        <div class="faith-centrepiece">
           <div class="faith-crown">
             <i data-lucide="crown" class="icon-xs"></i>
             <span>At the Centre of Everything We Do</span>
@@ -546,7 +529,7 @@
         </div>
 
         <!-- Surrounding 7 Values + Faith in Full Interactive Grid -->
-        <div class="values-bloom-grid reveal-up">
+        <div class="values-bloom-grid">
           <div class="value-petal-card active-faith" tabindex="0">
             <div class="petal-top">
               <div class="petal-icon">
@@ -641,7 +624,7 @@
     <!-- OUR OBJECTIVES SECTION -->
     <section class="objectives-section" id="objectives">
       <div class="container">
-        <div class="section-header text-center reveal-up">
+        <div class="section-header text-center">
           <span class="section-eyebrow">
             <i data-lucide="award" class="icon-xs"></i>
             <span>Purpose in Action</span>
@@ -652,7 +635,7 @@
 
         <div class="objectives-grid">
           <!-- Objective 1 -->
-          <article class="objective-card reveal-up">
+          <article class="objective-card">
             <div class="obj-header">
               <span class="obj-num">01</span>
               <div class="obj-icon-badge">
@@ -666,7 +649,7 @@
           </article>
 
           <!-- Objective 2 -->
-          <article class="objective-card reveal-up">
+          <article class="objective-card">
             <div class="obj-header">
               <span class="obj-num">02</span>
               <div class="obj-icon-badge">
@@ -680,7 +663,7 @@
           </article>
 
           <!-- Objective 3 -->
-          <article class="objective-card reveal-up">
+          <article class="objective-card">
             <div class="obj-header">
               <span class="obj-num">03</span>
               <div class="obj-icon-badge">
@@ -694,7 +677,7 @@
           </article>
 
           <!-- Objective 4 -->
-          <article class="objective-card reveal-up">
+          <article class="objective-card">
             <div class="obj-header">
               <span class="obj-num">04</span>
               <div class="obj-icon-badge">
@@ -708,7 +691,7 @@
           </article>
 
           <!-- Objective 5 -->
-          <article class="objective-card reveal-up">
+          <article class="objective-card">
             <div class="obj-header">
               <span class="obj-num">05</span>
               <div class="obj-icon-badge">
@@ -722,7 +705,7 @@
           </article>
 
           <!-- Objective 6 -->
-          <article class="objective-card reveal-up">
+          <article class="objective-card">
             <div class="obj-header">
               <span class="obj-num">06</span>
               <div class="obj-icon-badge">
@@ -736,7 +719,7 @@
           </article>
 
           <!-- Objective 7 (Full Width Featured Banner Card) -->
-          <article class="objective-card objective-card-wide reveal-up">
+          <article class="objective-card objective-card-wide">
             <div class="obj-wide-content">
               <div class="obj-header">
                 <span class="obj-num">07</span>
@@ -765,7 +748,7 @@
     <!-- DAILY GRACE & AFFIRMATION GENERATOR (Interactive Feature) -->
     <section class="affirmation-section">
       <div class="container">
-        <div class="affirmation-box reveal-up">
+        <div class="affirmation-box">
           <span class="section-eyebrow">
             <i data-lucide="sparkles" class="icon-xs"></i>
             <span>A Gentle Reminder For Your Heart</span>
@@ -786,7 +769,7 @@
     <!-- FOUNDERS SECTION -->
     <section class="founders-section" id="founders">
       <div class="container">
-        <div class="section-header text-center reveal-up">
+        <div class="section-header text-center">
           <span class="section-eyebrow">
             <i data-lucide="users" class="icon-xs"></i>
             <span>The Hearts Behind the Vision</span>
@@ -797,7 +780,7 @@
 
         <div class="founders-grid">
           <!-- Founder 1: Happy Nodada -->
-          <div class="founder-card reveal-up">
+          <div class="founder-card">
             <div class="founder-floral-ring">
               <div class="founder-monogram pink-monogram">HN</div>
               <span class="ring-blossom" aria-hidden="true">
@@ -817,7 +800,7 @@
           </div>
 
           <!-- Founder 2: Siyabusiswa Mthembu -->
-          <div class="founder-card reveal-up" style="transition-delay: 140ms;">
+          <div class="founder-card">
             <div class="founder-floral-ring">
               <div class="founder-monogram purple-monogram">SM</div>
               <span class="ring-blossom" aria-hidden="true">
@@ -843,7 +826,7 @@
     <section class="contact-section" id="contact">
       <div class="container">
         <div class="contact-wrapper">
-          <div class="contact-info-panel reveal-up">
+          <div class="contact-info-panel">
             <span class="section-eyebrow">
               <i data-lucide="message-circle-heart" class="icon-xs"></i>
               <span>Walk With Us</span>
@@ -924,7 +907,7 @@
           </div>
 
           <!-- Interactive Sisterhood Connection Form -->
-          <div class="contact-form-panel reveal-up" style="transition-delay: 140ms;">
+          <div class="contact-form-panel">
             <div class="form-card">
               <div class="form-header">
                 <div class="form-icon-circle">
