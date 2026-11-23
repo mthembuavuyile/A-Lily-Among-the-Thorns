@@ -1569,6 +1569,22 @@ section {
   text-align: center;
   font-size: 0.85rem;
   color: #CFA7C4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-credit a {
+  color: #F9A8D4;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-credit a:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
 }
 
 /* Toast */
