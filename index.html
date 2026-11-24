@@ -44,10 +44,10 @@
   <link rel="preconnect" href="https://unpkg.com" crossorigin />
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500&display=swap" rel="stylesheet" />
 
-  <!-- Preload Hero Illustration for LCP -->
-  <link rel="preload" as="image" href="assets/images/hero-lily.svg" />
+  <!-- Preload Hero Image for LCP -->
+  <link rel="preload" as="image" href="assets/images/A%20Lily%20Among%20the%20Thorns.jpeg" />
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/styles.css" />
@@ -275,31 +275,59 @@
   <main>
     <!-- HERO SECTION -->
     <section class="hero-section" id="home">
+      <!-- Right-side Hero Lily Photograph (Visible on Mobile & Desktop) -->
+      <div class="hero-visual-bg" aria-hidden="true">
+        <img
+          src="assets/images/A%20Lily%20Among%20the%20Thorns.jpeg"
+          alt="A lily blooming among thorns in warm light"
+          width="624"
+          height="624"
+          fetchpriority="high"
+          class="hero-lily-bg-img"
+        />
+        <div class="hero-visual-fade"></div>
+      </div>
+
       <div class="container hero-grid">
         <div class="hero-content">
           <div class="pill-badge">
-            <i data-lucide="flower-2" class="icon-sm badge-icon"></i>
             <span>Welcome to Our Sanctuary of Grace</span>
           </div>
 
           <h1 class="hero-title">
-            A Lily Among <span class="gradient-italic">the Thorns</span>
+            A Lily Among<br />
+            <span class="gradient-italic">the <span class="thorns-underline">Thorns</span></span>
           </h1>
 
           <p class="hero-tagline">
-            Growing with grace in a world that isn't always gentle.
+            Growing with grace in a world<br />
+            that isn't always gentle.
           </p>
 
           <div class="hero-pillars">
-            <span class="pillar-chip"><span class="dot pink"></span>Rooted in Christ.</span>
-            <span class="pillar-chip"><span class="dot purple"></span>Growing in purpose.</span>
-            <span class="pillar-chip"><span class="dot rose"></span>Blooming in faith.</span>
+            <div class="pillar-chip">
+              <span class="pillar-icon-box" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-xs"><path d="M12 3v18"/><path d="M7 8h10"/></svg>
+              </span>
+              <span class="pillar-label">Rooted<br />in Christ.</span>
+            </div>
+
+            <div class="pillar-chip">
+              <span class="pillar-icon-box" aria-hidden="true">
+                <i data-lucide="sprout" class="icon-xs"></i>
+              </span>
+              <span class="pillar-label">Growing<br />in purpose.</span>
+            </div>
+
+            <div class="pillar-chip">
+              <span class="pillar-icon-box" aria-hidden="true">
+                <i data-lucide="flower-2" class="icon-xs"></i>
+              </span>
+              <span class="pillar-label">Blooming<br />in faith.</span>
+            </div>
           </div>
 
           <div class="hero-scripture-card">
-            <div class="quote-icon" aria-hidden="true">
-              <i data-lucide="quote" class="icon-xl"></i>
-            </div>
             <blockquote>
               “Rooted and built up in him, and established in the faith, as ye have been taught, abounding therein with thanksgiving.”
             </blockquote>
@@ -312,49 +340,11 @@
               <i data-lucide="arrow-right" class="icon-sm"></i>
             </a>
             <a href="#contact" class="btn btn-secondary">
-              <i data-lucide="heart-handshake" class="icon-sm"></i>
+              <i data-lucide="heart" class="icon-sm"></i>
               <span>Connect With Us</span>
             </a>
           </div>
         </div>
-
-        <div class="hero-visual">
-          <div class="floral-arch-frame">
-            <div class="arch-inner">
-              <img src="assets/images/hero-lily.svg" alt="Blooming pink and white lilies in gentle golden light" width="480" height="540" fetchpriority="high" class="hero-lily-img" />
-            </div>
-
-            <!-- Highlight Badges -->
-            <div class="hero-badges-row">
-              <div class="floating-card card-top-right">
-                <div class="fc-icon">
-                  <i data-lucide="sparkles" class="icon-md"></i>
-                </div>
-                <div>
-                  <strong>Ages 18 &amp; Above</strong>
-                  <span>Safe &amp; Nurturing Space</span>
-                </div>
-              </div>
-
-              <div class="floating-card card-bottom-left">
-                <div class="fc-icon">
-                  <i data-lucide="flower-2" class="icon-md"></i>
-                </div>
-                <div>
-                  <strong>Christ-Centered</strong>
-                  <span>Faith, Self-Love &amp; Sisterhood</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Wave Floral Divider -->
-      <div class="floral-divider" aria-hidden="true">
-        <svg viewBox="0 0 1440 90" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-          <path d="M0 45C240 95 480 -5 720 45C960 95 1200 -5 1440 45V90H0V45Z" fill="#FFF8FB"/>
-        </svg>
       </div>
     </section>
 
@@ -537,7 +527,6 @@
               <div class="petal-icon">
                 <i data-lucide="book-open" class="icon-md"></i>
               </div>
-              <span class="petal-badge">Centre</span>
             </div>
             <h4>Faith</h4>
             <p>Building our lives on a solid foundation in God.</p>
@@ -548,7 +537,6 @@
               <div class="petal-icon">
                 <i data-lucide="flower-2" class="icon-md"></i>
               </div>
-              <span class="petal-badge">Value 02</span>
             </div>
             <h4>Grace</h4>
             <p>Giving ourselves and others room to grow.</p>
@@ -559,7 +547,6 @@
               <div class="petal-icon">
                 <i data-lucide="heart" class="icon-md"></i>
               </div>
-              <span class="petal-badge">Value 03</span>
             </div>
             <h4>Self-love</h4>
             <p>Recognizing the worth God has placed within us.</p>
@@ -570,7 +557,6 @@
               <div class="petal-icon">
                 <i data-lucide="users" class="icon-md"></i>
               </div>
-              <span class="petal-badge">Value 04</span>
             </div>
             <h4>Sisterhood</h4>
             <p>Supporting, uplifting and growing together.</p>
@@ -581,7 +567,6 @@
               <div class="petal-icon">
                 <i data-lucide="hand-heart" class="icon-md"></i>
               </div>
-              <span class="petal-badge">Value 05</span>
             </div>
             <h4>Compassion</h4>
             <p>Leading with kindness and understanding.</p>
@@ -592,7 +577,6 @@
               <div class="petal-icon">
                 <i data-lucide="sprout" class="icon-md"></i>
               </div>
-              <span class="petal-badge">Value 06</span>
             </div>
             <h4>Growth</h4>
             <p>Embracing spiritual, personal and practical development.</p>
@@ -603,7 +587,6 @@
               <div class="petal-icon">
                 <i data-lucide="crown" class="icon-md"></i>
               </div>
-              <span class="petal-badge">Value 07</span>
             </div>
             <h4>Dignity</h4>
             <p>Honoring the value of every woman.</p>
@@ -614,7 +597,6 @@
               <div class="petal-icon">
                 <i data-lucide="compass" class="icon-md"></i>
               </div>
-              <span class="petal-badge">Value 08</span>
             </div>
             <h4>Purpose</h4>
             <p>Encouraging women to discover and walk in their God given calling.</p>
@@ -797,14 +779,9 @@
             <div class="founder-content">
               <span class="founder-role">Co-Founder</span>
               <h3 class="founder-name">Happy Nodada</h3>
-              <p class="founder-bio">
-                Passionate about seeing young women rooted in Christ, walking boldly in their God-given identity, and flourishing with dignity, self-love, and grace.
-              </p>
-              <div class="founder-tags">
-                <span>Faith &amp; Mentorship</span>
-                <span>Sisterhood</span>
-                <span>Empowerment</span>
-              </div>
+              <blockquote class="founder-bio">
+                “I am a young woman with a gentle heart, a deep love for God and a desire to make a difference in the lives of others. My journey is not always easy, but I have learned to find comfort in God's presence and trust Him through every season. I believe in the power of kindness, compassion and sisterhood. I have a heart for seeing other young women thrive, feel supported and discover their worth in Christ. I am still growing, learning and becoming, and I hope that through my journey, I can be a source of encouragement, love and light to the women around me.”
+              </blockquote>
             </div>
           </article>
 
@@ -824,16 +801,21 @@
             <div class="founder-content">
               <span class="founder-role">Co-Founder</span>
               <h3 class="founder-name">Siyabusiswa Mthembu</h3>
-              <p class="founder-bio">
-                Dedicated to cultivating a safe, nurturing Christ-centered sisterhood where every young woman feels seen, heard, valued, and equipped for purpose.
-              </p>
-              <div class="founder-tags">
-                <span>Purpose &amp; Growth</span>
-                <span>Wellness</span>
-                <span>Community Outreach</span>
-              </div>
+              <blockquote class="founder-bio">
+                “I am a young woman rooted in Christ, striving to live a life of holiness and allowing God to guide me into becoming the woman He has called me to be. I am ambitious and passionate about growing both personally and professionally, while remaining grounded in my faith. I have a heart for empowering, inspiring and supporting other young women as we grow in Christ, discover our purpose and become the women God created us to be.”
+              </blockquote>
             </div>
           </article>
+        </div>
+
+        <!-- Donations & Partnership Note -->
+        <div class="founders-partnership-note">
+          <p>
+            For donations and partnerships, kindly reach out to us at
+            <a href="tel:+27683438490">+27 68 343 8490</a> or
+            <a href="tel:+27650672694">+27 65 067 2694</a>,
+            or <a href="#contact" class="partnership-contact-link">send us a message directly</a>.
+          </p>
         </div>
       </div>
     </section>
