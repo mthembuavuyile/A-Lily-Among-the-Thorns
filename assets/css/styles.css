@@ -1329,7 +1329,8 @@ section {
   border: 1px solid var(--border-delicate);
 }
 
-.ig-cm {
+.ig-cm,
+.tiktok-cm {
   background: var(--bg-subtle);
   color: var(--text-dark);
   border: 1px solid var(--border-delicate);
@@ -1404,13 +1405,15 @@ section {
   border-color: var(--purple-600);
 }
 
-.ig-pill {
+.ig-pill,
+.tiktok-pill {
   background: var(--text-dark);
   color: #FFFFFF;
   border-color: var(--text-dark);
 }
 
-.ig-pill:hover {
+.ig-pill:hover,
+.tiktok-pill:hover {
   background: var(--pink-600);
   border-color: var(--pink-600);
 }
